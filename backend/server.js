@@ -1,6 +1,7 @@
 import express from "express";
 import connectToDatabase from "./config/database.js";
 import userRoutes from "./routes/userRoutes.js";
+import productRoutes from "./routes/produtRoutes.js";
 // create a new exprees application 
 
 let app = express();
@@ -17,6 +18,7 @@ app.get('/kle-bca', helloWorld);
 
 // 
 app.use("/users", userRoutes);
+app.use("/products", productRoutes);
 
 // connecting to the database
 connectToDatabase();
